@@ -23,3 +23,42 @@ $(function() {
     $(selector).action();
 })
 ```
+
+## jQuery Selectors
+
+#### Grouping Selector
+```js
+$('h2,h3,h4').css('border','solid 1px red');
+```
+#### Id Selector
+```js
+$('div#container').css('border','solid 1px red');
+```
+#### Class Selector
+```js
+$('p.lead').css('border','solid 1px red');
+```
+#### Pseudo-element selector - selects first element
+```js
+
+```
+#### Pseudo-element selector - selects even P tags
+```js
+$('p:even').css('border','solid 1px red');
+```
+#### Descendant selector
+```js
+$('div em').css('border','solid 1px red');
+```
+#### Child selector
+```js
+$('div > p').css('border','solid 1px red');
+```
+#### jQuery Header selector
+```js
+$(':header').css('border','solid 1px red');
+```
+#### jQuery Contains selector
+```js
+$('div:contains("Brad")').css('border','solid 1px red');
+```
