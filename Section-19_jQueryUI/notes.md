@@ -39,3 +39,58 @@ $("#sortableToo").sortable({
   placeholder: "placeholderBox",
 });
 ```
+
+## Accordion
+
+```js
+// https://jqueryui.com/accordion/
+
+$("#accordion").accordion({ collapsible: true, heightStyle: "content" });
+```
+
+## Datepicker
+
+```js
+// DATEPICKER
+// https://jqueryui.com/datepicker/
+
+$(".date").datepicker({
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  showButtonPanel: true,
+  changeMonth: false,
+  changeYear: false,
+  numberOfMonths: 2,
+  minDate: -1,
+  maxDate: "+1W +5D",
+});
+```
+
+## Todo List
+
+```js
+$("#todoList ul").sortable({
+  items: "li:not('.listTitle, .addItem')",
+  connectWith: "ul",
+  dropOnEmpty: true,
+  placeholder: "emptySpace",
+});
+
+$("input").keydown(function (e) {
+  if (e.keyCode == 13) {
+    var item = $(this).val();
+
+    $(this)
+      .parent()
+      .parent()
+      .append("<li>" + item + "</li>");
+    $(this).val("");
+  }
+});
+
+$("#trash").droppable({
+  drop: function (event, ui) {
+    ui.draggable.remove();
+  },
+});
+```
