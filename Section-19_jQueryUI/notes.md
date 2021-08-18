@@ -12,3 +12,14 @@ $("#box2").draggable({ axis: "x" });
 $("#box3").draggable({ axis: "y" });
 $("#box4").draggable({ containment: ".container", revert: "invalid" });
 ```
+
+## Droppable
+
+```js
+$("#droppable").droppable({
+  accept: "#box1",
+  drop: function () {
+    $(this).text("when a box got attitude, drop it like it's hot!");
+  },
+});
+```
