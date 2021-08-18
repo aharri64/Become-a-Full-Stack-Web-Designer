@@ -16,10 +16,26 @@ $("#box4").draggable({ containment: ".container", revert: "invalid" });
 ## Droppable
 
 ```js
+// https://jqueryui.com/droppable/
 $("#droppable").droppable({
   accept: "#box1",
   drop: function () {
     $(this).text("when a box got attitude, drop it like it's hot!");
   },
+});
+```
+
+## sortable
+
+```js
+// https://jqueryui.com/sortable/
+
+$("#sortable").sortable({
+  connectWith: "#sortableToo",
+  placeholder: "placeholderBox",
+});
+$("#sortableToo").sortable({
+  connectWith: "#sortable",
+  placeholder: "placeholderBox",
 });
 ```
